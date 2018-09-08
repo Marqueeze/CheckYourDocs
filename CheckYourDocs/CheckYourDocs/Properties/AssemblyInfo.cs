@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов, чтобы изменить сведения,
 // связанные со сборкой.
-[assembly: AssemblyTitle("xml-parser")]
+[assembly: AssemblyTitle("CheckYourDocs")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("xml-parser")]
+[assembly: AssemblyProduct("CheckYourDocs")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("b4ed8ea3-a5a2-4236-84d9-a22bd3cce8cb")]
+[assembly: Guid("0c973972-373b-421b-9a33-f83276cc8a4b")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
