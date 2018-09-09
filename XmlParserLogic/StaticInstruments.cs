@@ -29,9 +29,9 @@ namespace XmlParserLogic
             if (File.Exists(@input_path))
             {
                 Regex re = new Regex(".docx?$");
-                string save_pass = re.Replace(input_path, ".xml");
+                string save_pass = String.Concat("E:/", re.Replace(input_path.Remove(0,input_path.LastIndexOf("\\")+1), ".xml"));
                 Document doc = App.Documents.Open(@input_path);
-                doc.SaveAs(save_pass);
+                doc.SaveAs(@save_pass,WdSaveFormat.wdFormatXML);
                 doc.Save();
                 doc.Close();
                 App.Quit();
