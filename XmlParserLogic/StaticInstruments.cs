@@ -23,15 +23,15 @@ namespace XmlParserLogic
             throw new Exception("No file chosen");
         }
 
-        public static string ConvertDocToXml(string input_path)
-    {      
+        public static string ConvertDocToHtml(string input_path)
+        {
             Microsoft.Office.Interop.Word.Application App = new Microsoft.Office.Interop.Word.Application();
             if (File.Exists(@input_path))
             {
                 Regex re = new Regex(".docx?$");
-                string save_pass = String.Concat("E:/", re.Replace(input_path.Remove(0,input_path.LastIndexOf("\\")+1), ".xml"));
+                string save_pass = re.Replace(input_path, ".html");
                 Document doc = App.Documents.Open(@input_path);
-                doc.SaveAs(@save_pass,WdSaveFormat.wdFormatXML);
+                doc.SaveAs(@save_pass, WdSaveFormat.wdFormatHTML);
                 doc.Save();
                 doc.Close();
                 App.Quit();

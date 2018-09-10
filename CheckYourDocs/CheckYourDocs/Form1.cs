@@ -22,8 +22,11 @@ namespace CheckYourDocs
 
         private void startBT_Click_1(object sender, EventArgs e)
         {
-            string XmlContent = File.ReadAllText(SI.ConvertDocToXml(SI.GetFilePath()));
-            outputTB.Text = XmlContent;
+            string wordPath = SI.GetFilePath();
+            string HtmlContent = File.ReadAllText(SI.ConvertDocToHtml(@wordPath));
+            string WordContent = File.ReadAllText(@wordPath);
+            htmlTB.Text = HtmlContent;
+            wordTB.Text = WordContent;
         }
     }
 }

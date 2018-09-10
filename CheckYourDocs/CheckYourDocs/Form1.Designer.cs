@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.startBT = new System.Windows.Forms.Button();
-            this.outputTB = new System.Windows.Forms.TextBox();
+            this.htmlTB = new System.Windows.Forms.TextBox();
+            this.wordTB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // startBT
@@ -42,20 +43,29 @@
             this.startBT.UseVisualStyleBackColor = true;
             this.startBT.Click += new System.EventHandler(this.startBT_Click_1);
             // 
-            // outputTB
+            // htmlTB
             // 
-            this.outputTB.Location = new System.Drawing.Point(65, 40);
-            this.outputTB.Multiline = true;
-            this.outputTB.Name = "outputTB";
-            this.outputTB.Size = new System.Drawing.Size(337, 245);
-            this.outputTB.TabIndex = 1;
+            this.htmlTB.Location = new System.Drawing.Point(25, 12);
+            this.htmlTB.Multiline = true;
+            this.htmlTB.Name = "htmlTB";
+            this.htmlTB.Size = new System.Drawing.Size(382, 245);
+            this.htmlTB.TabIndex = 1;
+            // 
+            // wordTB
+            // 
+            this.wordTB.Location = new System.Drawing.Point(434, 12);
+            this.wordTB.Multiline = true;
+            this.wordTB.Name = "wordTB";
+            this.wordTB.Size = new System.Drawing.Size(354, 245);
+            this.wordTB.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.outputTB);
+            this.Controls.Add(this.wordTB);
+            this.Controls.Add(this.htmlTB);
             this.Controls.Add(this.startBT);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -67,7 +77,8 @@
         #endregion
 
         private System.Windows.Forms.Button startBT;
-        private System.Windows.Forms.TextBox outputTB;
+        private System.Windows.Forms.TextBox htmlTB;
+        private System.Windows.Forms.TextBox wordTB;
     }
 }
 
