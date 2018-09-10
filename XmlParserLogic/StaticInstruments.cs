@@ -31,7 +31,7 @@ namespace XmlParserLogic
                 Regex re = new Regex(".docx?$");
                 string save_pass = re.Replace(input_path, ".html");
                 Document doc = App.Documents.Open(@input_path);
-                doc.SaveAs(@save_pass, WdSaveFormat.wdFormatHTML);
+                doc.SaveAs(@save_pass, WdSaveFormat.wdFormatFilteredHTML);
                 doc.Save();
                 doc.Close();
                 App.Quit();
@@ -39,6 +39,23 @@ namespace XmlParserLogic
             }
             App.Quit();
             throw new Exception("Wrong file directory");
+        }
+
+        public static string GetHtmlBodyContent(string htmlPath)
+        {
+            if (File.Exists(@htmlPath))
+            {
+                string HtmlContent = File.ReadAllText(@htmlPath);
+                int tmp = HtmlContent.Length;
+                int start = HtmlContent.IndexOf("</head>");
+                int end = HtmlContent.IndexOf("</body>");
+                if (start<0 || end<0)
+                {
+                    throw new Exception("Got not an HTML file");
+                }
+                return HtmlContent.Substring(start + 7, end - start);
+            }
+            throw new Exception("File does not exist");
         }
     }
 }
